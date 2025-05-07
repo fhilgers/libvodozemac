@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2025 Felix Hilgers <contact@fhilgers.com>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+[package]
+name = "libvodozemac"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+authors = ["Felix Hilgers"]
+
+[lib]
+name = "vodozemac"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+jni = {  version = "0.21.1" }
+vodozemac = { version = "0.9.0", features = ["low-level-api"] }
+getrandom = {  version = "0.2.16", features = [ "custom" ] }
+parking_lot = "0.12.3"
+macros = { path = "./macros" }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1

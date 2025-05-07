@@ -1,0 +1,13 @@
+{
+  "name": "vodozemac",
+  "version": "1.0.0",
+  "main": "dist/vodozemac.mjs",
+  "type": "module",
+  "devDependencies": {
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-wasm": "^6.2.2",
+    "prettier": "3.5.3",
+    "rollup": "^4.40.1"
+  }
+}
